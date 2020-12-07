@@ -82,14 +82,10 @@ function rot13(string) {
   return strCipher;
 }
 
-let someText = "J'ai livré mes bagages à l'hôtel [je suis dans la chambre n° 407], et maintenant je suis à votre service.";
-
-console.log(rot13(someText));
-
 /* 
 For some "further exploration," I thought it might be interesting to allow 
-the user to vary the number of characters to rotate. I came up with this 
-modified solution.
+the user to vary the number of characters to rotate, and to have the option
+of rotating in reverse. I came up with this modified solution.
 
 Problem definition rules: 
 
@@ -226,9 +222,12 @@ function rotAny(string, count = 13, reverse = false) {
   return strCipher;
 }
 
+let plainText = "J'ai déposé mes bagages à l'hôtel (je suis dans la chambre 407), et je suis maintenant à votre service. [I have dropped my luggage off at the hotel (I'm in room 407), and I am now at your service.]";
 
+console.log(rot13(plainText));
 
-console.log(rotAny(someText));
-console.log(rotAny(rotAny(someText)));
-console.log(rotAny(someText, 5, true));
+console.log(rotAny(plainText));
+console.log(rotAny(rotAny(plainText)));
+console.log(rotAny(plainText, 5, true));
+
 
