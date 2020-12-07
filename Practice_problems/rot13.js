@@ -181,9 +181,6 @@ rotateString()
 
 */
 
-// This function rotates a string. Parameters are the string, how many 
-// characters to rotate by, and optionally whether to rotate backwards.
-
 function rotateString(string, count, reverse = false) {
   let arrRotated = string.split('');
   for (let i = 0; i < count; i++) {
@@ -195,10 +192,6 @@ function rotateString(string, count, reverse = false) {
   }
   return arrRotated.join('');
 }
-
-// This function creates a rotated string that can be used to compare
-// with plaintext alphabet. Index for any alphabet character in 
-// plaintext corresponds with encrypted character in rotated string.
 
 function rotAny(string, count = 13, reverse = false) {
   const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
