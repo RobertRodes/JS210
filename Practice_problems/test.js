@@ -1,32 +1,13 @@
-function substring(string, start, end) {
-  if (isNaN(start) || start < 0) {
-    start = 0;
-  }
-
-  if (isNaN(end) || end < 0) {
-    end = 0;
-  }
-  
-  if (end === undefined || end > string.length) {
-    end = string.length;
-  }
-  
-  if (start > end) {
-    [start, end] = [end, start];
-  }
-
-  let subString = '';
-  for(i = start; i < end; i++) {
-    subString += string[i];
-  }
-
-  return subString;
+function multisum(uLimit) {
+  range = Array.from({length: uLimit}, (_, i) => ++i);
+  return range.filter(num => num % 3 === 0 || num % 5 === 0)
+              .reduce((total, num) => total + num);
 }
 
-let string = 'hello world';
 
-// console.log(substring(string, 2, 4));    // "ll"
-// console.log(substring(string, 4, 2));    // "ll"
-// console.log(substring(string, 0, -1));   // ""
-console.log(substring(string, 2));       // "llo world"
-console.log(substring(string, 'a'));     // "hello world"
+
+console.log(multisum(3));
+console.log(multisum(5));
+console.log(multisum(10));
+console.log(multisum(1000));
+console.log(multisum(1000000000));
