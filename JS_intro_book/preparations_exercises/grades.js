@@ -5,9 +5,8 @@ function avg(arr) {
 }
 
 let grades = [];
-let oneGrade;
 while(true) {
-  oneGrade = rlSync.question('Enter grade: ');
+  let oneGrade = rlSync.question('Enter grade: ');
   if (oneGrade === '') break;
   grades.push(Number(oneGrade));
 }

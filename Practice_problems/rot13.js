@@ -4,8 +4,8 @@ function isEncryptable(char) {
   return ALPHABET.indexOf(char.toLowerCase()) !== -1;
 }
 
-function isUpper(char) {
-  return /[A-Z]/.test(char);
+function encryptCase(char, encryptedChar) {
+  return /[A-Z]/.test(char) ? encryptedChar.toUpperCase() : encryptedChar;
 }
 
 function rotateIndex(idx) {
@@ -19,7 +19,7 @@ function encrypt(char) {
   let charIndex = ALPHABET.indexOf(char.toLowerCase());  
   let encryptedChar = ALPHABET[rotateIndex(charIndex)];
 
-  if (isUpper(char)) encryptedChar = encryptedChar.toUpperCase();
+  encryptedChar = encryptCase(char, encryptedChar);
 
   return encryptedChar;
 }
