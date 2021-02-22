@@ -1,25 +1,27 @@
 function getOrdinalSuffix(number) {
-  modTen = number % 10;
-  if (modTen > 3 || [11, 12, 13].includes(number)) return 'th';
+  let modTen = number % 10;
+  if ([11, 12, 13].includes(number)) return 'th';
   switch (modTen) {
     case 1: return 'st';
     case 2: return 'nd';
     case 3: return 'rd';
   }
+
+  return 'th';
 }
 
 function formattedMonth(date) {
   const MONTHS = [
-    'Jan', 'Feb', 'Mar', 'Apr', 
-    'May', 'Jun', 'Jul', 'Aug', 
+    'Jan', 'Feb', 'Mar', 'Apr',
+    'May', 'Jun', 'Jul', 'Aug',
     'Sep', 'Oct', 'Nov', 'Dec'
-  ]
+  ];
 
   return MONTHS[date.getMonth()];
 }
 
 function formattedDay(date) {
-  day = date.getDate();
+  let day = date.getDate();
   return String(day) + getOrdinalSuffix(day);
 }
 
@@ -45,5 +47,7 @@ function todaysDate() {
 let today = new Date();
 let tomorrow = new Date(today.getTime());
 tomorrow.setDate(today.getDate() + 1);
+
+console.log(todaysDate);
 
 console.log(formatTime(today));

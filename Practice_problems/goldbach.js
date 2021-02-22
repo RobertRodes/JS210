@@ -2,7 +2,7 @@ function isPrime(num) {
   if (num === 2) return true;
   if (num <= 1 || num % 2 === 0) return false;
 
-  let numRoot = Math.sqrt(num)
+  let numRoot = Math.sqrt(num);
   for (let i = 3; i <= numRoot; i += 2) {
     if (num % i === 0) {
       return false;
@@ -19,7 +19,7 @@ function checkGoldbach(num) {
   }
 
   // Allows incrementing by even numbers in the for loop
-  if (num === 4) { 
+  if (num === 4) {
     console.log(2, 2);
     return;
   }

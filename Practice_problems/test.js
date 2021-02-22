@@ -1,10 +1,12 @@
+function arrReverse(arr) {
+  let clone = [...arr];
+  let revArr = [];
+  while (clone.length > 0) {
+    revArr.push(clone.pop());
+  }
 
-let x = function counter(count) {
-  console.log(rate);
+  return revArr;
 }
 
-rate = 3;
-var rate;
-// let counter = 5;
-x(7);
-// console.log('The total value is ' + String(counter * rate));
+
+console.log(arrReverse([1, 2, 3, 4, 5]));

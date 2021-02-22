@@ -55,5 +55,5 @@ function logInBox(string, width = string.length) {
 
 logInBox('To boldly go where no one has gone before.');
 
-let string = 'Four score and seven years ago, our       fathers brought forth upon this continent a new nation, conceived in liberty, and dedicated to the principle that all men are created equal.';
+let string = 'Four score and seven years ago, our fathers brought forth upon this continent a new nation, conceived in liberty, and dedicated to the principle that all men are created equal.';
 logInBox(string, 30);
