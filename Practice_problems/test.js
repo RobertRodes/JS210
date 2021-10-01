@@ -1,12 +1,8 @@
-function arrReverse(arr) {
-  let clone = [...arr];
-  let revArr = [];
-  while (clone.length > 0) {
-    revArr.push(clone.pop());
-  }
+//var test = 'Hi';
 
-  return revArr;
+function test() {
+  console.log('yup');
 }
 
-
-console.log(arrReverse([1, 2, 3, 4, 5]));
+console.log(typeof test);
+console.log(globalThis);
